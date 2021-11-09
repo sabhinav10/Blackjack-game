@@ -1,9 +1,20 @@
+//creating the player object having players Name and players chips
+let player ={
+    playerName:"Abhinav",
+    chips:200
+};
+//grabbing the player-el paragraph element and storing in a playerEl element
+let playerEl = document.getElementById("player-el");
+
+//Rendering the playerEl on the html
+playerEl.textContent = player.playerName +": $" + player.chips;
 let sum = 0 ;
 let hasBlackJack = false;
 let isAlive = false;
 let firstCard ;
 let secondCard ;
 let cards = [];
+
 //creating getRandomCard() function to generate random numbers using random() function that generates values between 0.000 to 0.999
 function getRandomCard(){
     let randomNum =(Math.random()*13) + 1;
