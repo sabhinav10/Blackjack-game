@@ -65,12 +65,15 @@ else
 messageEl.textContent = message;
 }
 //new card function for getting new card
+
 function newCard(){
     console.log("new card");
+    if(isAlive ===true && hasBlackJack===false){
     //creating the new card varriable
     let card = getRandomCard();
     //pushing card to the cards array
     cards.push(card);
     sum += card;
     renderGame();
+    }
 }
