@@ -4,18 +4,28 @@ let sum = firstCard + secondCard + 4;
 let hasBlackJack = false;
 let isAlive = true;
 //console.log(sum);
+//storing message element
+let messageEl = document.getElementById("message-el");
+
+//storing Sum element 
+let sumEl = document.querySelector("#sum-el");
+
 function startGame(){
 let message = "";
-if(sum <= 20){
-    message = "Do you want to draw a new card? 😃";
+sumEl.textContent = "Sum: " + sum;
+if(sum <= 20)
+{
+    message = "Do you want to draw a new card?";
 }
-else if(sum === 21){
-  message = "Wohoo!!! You have got Blackjack 🎉🎉";
+else if(sum === 21)
+{
+  message = "You have got Blackjack";
   hasBlackJack = true;
 }
-else{
-    message = "You're out of the game! 😥😥😥";
+else
+{
+    message = "You're out of the game!!";
     isAlive = false;
 }
-console.log(message);
+messageEl.textContent = message;
 }
