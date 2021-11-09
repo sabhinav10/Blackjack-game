@@ -1,0 +1,16 @@
+h1 {
+  color: purple;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: url(table.png);
+  text-align: center;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+}
+#message-el {
+  font-style: italic;
+}
