@@ -1,9 +1,23 @@
-let firstCard = 2;
-let secondCard = 8;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let sum = firstCard + secondCard ;
 let cards = [firstCard,secondCard];
 let hasBlackJack = false;
 let isAlive = true;
+//creating getRandomCard() function to generate random numbers using random() function that generates values between 0.000 to 0.999
+function getRandomCard(){
+    let randomNum =(Math.random()*13) + 1;
+    randomNum = Math.floor(randomNum);
+    if(randomNum > 10){
+        return 10;
+    }
+    else if(randomNum === 1){
+        return 11;
+    }
+    else{
+        return randomNum;
+    }
+}
 //console.log(sum);
 //storing message element
 let messageEl = document.getElementById("message-el");
@@ -47,7 +61,7 @@ messageEl.textContent = message;
 function newCard(){
     console.log("new card");
     //creating the new card varriable
-    let card = 7;
+    let card = getRandomCard();
     //pushing card to the cards array
     cards.push(card);
     sum += card;
