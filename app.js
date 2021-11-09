@@ -1,9 +1,9 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard ;
-let cards = [firstCard,secondCard];
+let sum = 0 ;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
+let firstCard ;
+let secondCard ;
+let cards = [];
 //creating getRandomCard() function to generate random numbers using random() function that generates values between 0.000 to 0.999
 function getRandomCard(){
     let randomNum =(Math.random()*13) + 1;
@@ -30,9 +30,16 @@ let cardsEl = document.getElementById("cards-el");
 
 //creating the startGame function that calls renderGame function
 function startGame(){
+    isAlive = true;
+    firstCard = getRandomCard();
+    secondCard = getRandomCard();
+    cards = [firstCard,secondCard];
+    sum = firstCard + secondCard;
     renderGame();
 }
 function renderGame(){
+   
+
     //rendering the cards using arrays
     cardsEl.textContent = "Cards: "
     for(let i=0;i<cards.length;i++)
